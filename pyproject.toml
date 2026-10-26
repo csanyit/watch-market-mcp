@@ -11,6 +11,7 @@ requires-python = ">=3.10"
 dependencies = [
     "fastmcp>=0.1.0",
     "chrono24 @ git+https://github.com/irahorecka/chrono24.git@55976be80522f182df663a1f99d1e8c7efe0a288",
+    "loguru>=0.7.2",
 ]
 
 [tool.setuptools.packages.find]
