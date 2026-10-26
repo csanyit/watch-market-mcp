@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "watch-marketplace-mcp-server"
+version = "0.1.0"
+description = "MCP (Model Context Protocol) server for searching and retrieving watch details from Chrono24"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=0.1.0",
+    "chrono24 @ git+https://github.com/irahorecka/chrono24.git@55976be80522f182df663a1f99d1e8c7efe0a288",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+watch_rag = ["*.properties"]
+
+[project.scripts]
+watch-server = "watch_server:mcp.run"
